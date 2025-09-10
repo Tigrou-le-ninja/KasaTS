@@ -1,27 +1,27 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import './app.scss'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./app.scss";
 
-import home from './pages/home/home'
-import about from './pages/about/about'
-import details from './pages/details/details'
-import error from './pages/error/error'
+import Home from "./pages/home/home";
+import About from "./pages/about/about";
+import Details from "./pages/details/details";
+import Error from "./pages/error/error";
 
-import Header from './components/header/header'
-import Footer from './components/footer/footer'
+import Header from "./components/header/header";
+import Footer from "./components/footer/footer";
 
-function app() {
+function App() {
   return (
-  	<BrowserRouter>
-    <Header />
-		<Routes>
-			  <Route path="/" element={<home/>} />
-				<Route path="about" element={<about/>} />
-				<Route path="details/:id" element={<details/>} />
-				<Route path="*" element={<error/>} />
-		</Routes>
-    <Footer />
-	</BrowserRouter>
-  )
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="details/:id" element={<Details />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+  );
 }
 
-export default app;
+export default App;
