@@ -1,6 +1,7 @@
 import Banner from "../../components/banner/banner";
 import { useEffect, useState } from "react";
 import "./home.scss";
+import Card from "../../components/card/card";
 
 const Home = () => {
   const [locations, setLocations] = useState([]);
@@ -16,16 +17,11 @@ const Home = () => {
 
   return (
     <>
-      <Banner />
+      <Banner home />
       <main className="home">
         <section className="cards">
           {locations.map((location) => (
-            <Card
-              key={location.id}
-              title={location.title}
-              cover={location.cover}
-              id={location.id}
-            />
+            <Card key={location.id} title={location.title} cover={location.cover} id={location.id} />
           ))}
         </section>
       </main>
