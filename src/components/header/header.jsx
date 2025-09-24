@@ -5,24 +5,14 @@ function Header() {
   return (
     <header className="header">
       <Link to="/" aria-label="Retour à l'accueil">
-        <img src="" alt="Logo de Kasa" className="logo" />
+        <img src="src\assets\logo.png" alt="Logo de Kasa" className="logo" />
       </Link>
 
       <nav className="navbar">
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? "navbar__link--active" : "navbar__link"
-          }
-          to="/"
-        >
+        <NavLink className={({ isActive }) => (isActive ? "navbar__link--active" : "navbar__link")} to="/">
           Accueil
         </NavLink>
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? "navbar__link--active" : "navbar__link"
-          }
-          to="/about"
-        >
+        <NavLink className={({ isActive }) => (isActive ? "navbar__link--active" : "navbar__link")} to="/about">
           A Propos
         </NavLink>
       </nav>
