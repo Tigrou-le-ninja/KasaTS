@@ -13,33 +13,53 @@ import "./details.scss";
 const Details = () => {
   const title = "test";
   const content = "test content";
-  const { logement, setLogement } = useState(null);
-  // Récupérer l'ID du logement depuis les paramètres de l'URL
+
+  // Initialiser à `null` est plus sémantique pour un objet qu'on attend.
+  const [logement, setLogement] = useState(null);
   const { id } = useParams();
-  const getLogements = async () => {
+
+  const getLogement = async () => {
     const response = await fetch("/data/logements.json");
     const data = await response.json();
-    const temp = data.find((logt) => logt.id === id);
-    setLogement(temp);
-
-    if (!logement) {
-      return <Navigate to="/error" />;
-    }
+    // `find` retourne l'objet trouvé ou `undefined` si rien n'est trouvé.
+    const foundLogement = data.find((logt) => logt.id === id);
+    setLogement(foundLogement);
   };
-  // Le useEffect affiche le composant puis le remplit avec les données récupérées par getLogements
+
   useEffect(() => {
-    getLogements();
-  }, []);
+    getLogement();
+  }, [id]);
+  // Toujours inclure les dépendances externes utilisées [id].
+
+  // Au premier rendu, `logement` est `null`. On attend les données.
+  // Si on ne veut pas de "flash" d'une page vide, on peut retourner `null`.
+
+  if (logement === null) {
+    return <div>Chargement...</div>;
+  }
+
+  // Après le fetch, si `logement` est `undefined`, c'est que l'ID n'existe pas.
+  if (logement === undefined) {
+    return <Navigate to="/error" />;
+  }
 
   return (
     <div className="details">
-      <h1>{logement?.description}</h1>
       <Slider />
       <Apart />
       <Host />
       <Rating />
       <Tag />
-      <Collapse title={logement?.title} content={content} />
+      <Collapse title="Équipements">
+        <ul>
+          {logement.equipments.map((equipment, index) => {
+            return <li key={index}>{equipment}</li>;
+          })}
+        </ul>
+      </Collapse>
+      <Collapse title="Description">
+        <p>{logement.description}</p>
+      </Collapse>
     </div>
   );
 };

@@ -27,6 +27,7 @@
   }
 
   .collapse-content {
+    display: none;
     overflow: hidden;
     transition: max-height 0.4s ease;
     background: white;
@@ -36,5 +37,10 @@
     padding: 12px 16px;
     font-size: 14px;
     color: #333;
+  }
+
+  .collapse-content.open {
+    display: block;
+    max-height: 500px; /* Adjust based on content */
   }
 }
