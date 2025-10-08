@@ -8,7 +8,7 @@ const Slider = ({ pictures }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const total = pictures.length;
 
-  if (!pictures || pictures.length === 0) {
+  if (!pictures || total === 0) {
     return <p className="slider-empty">Aucune image à afficher</p>;
   }
 
