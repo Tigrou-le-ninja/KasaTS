@@ -19,7 +19,9 @@ const About = () => {
     <>
       <Banner page="about" />
       {collapses.map((collapse) => (
-        <Collapse key={collapse.id} title={collapse.title} content={collapse.content} />
+        <Collapse key={collapse.id} title={collapse.title}>
+          <p>{collapse.content}</p>
+        </Collapse>
       ))}
     </>
   );

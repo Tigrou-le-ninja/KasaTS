@@ -20,19 +20,17 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.4);
-    color: white;
-    border: none;
     font-size: 2.5rem;
     padding: 0.3rem 0.8rem;
     cursor: pointer;
-    border-radius: 50%;
     transition: background-color 0.3s ease;
     z-index: 10;
+    border: none;
+    background-color: transparent;
 
-    &:hover {
+    /* &:hover {
       background-color: rgba(0, 0, 0, 0.7);
-    }
+    } */
 
     &--prev {
       left: 15px;
@@ -48,7 +46,7 @@
     bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.4);
+    background: transparent;
     color: white;
     font-size: 1rem;
     padding: 0.3rem 0.8rem;
