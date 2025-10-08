@@ -11,9 +11,6 @@ import Collapse from "../../components/collapse/collapse";
 import "./details.scss";
 
 const Details = () => {
-  const title = "test";
-  const content = "test content";
-
   // Initialiser à `null` est plus sémantique pour un objet qu'on attend.
   const [logement, setLogement] = useState(null);
   const { id } = useParams();
@@ -45,7 +42,7 @@ const Details = () => {
 
   return (
     <div className="details">
-      <Slider />
+      <Slider pictures={logement.pictures} />
       <Apart />
       <Host />
       <Rating />

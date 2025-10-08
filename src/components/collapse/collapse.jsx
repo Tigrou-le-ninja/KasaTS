@@ -1,6 +1,7 @@
 import { useState, useId, useRef, useEffect } from "react";
 import Chevron from "../../assets/chevron.png";
-import "./Collapse.scss";
+
+import "./collapse.scss";
 
 const Collapse = ({ title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
