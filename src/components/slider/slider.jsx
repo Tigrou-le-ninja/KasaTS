@@ -39,11 +39,10 @@ const Slider = ({ pictures }) => {
       )}
 
       {/* Compteur */}
-      {total > 0 && (
-        <div className="slider-counter">
-          {currentIndex + 1}/{total}
-        </div>
-      )}
+      <div className="slider-counter">
+        {/* Style : display none en version mobile */}
+        {currentIndex + 1}/{total}
+      </div>
     </div>
   );
 };

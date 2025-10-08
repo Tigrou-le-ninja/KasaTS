@@ -47,16 +47,18 @@ const Details = () => {
       <Host />
       <Rating />
       <Tag />
-      <Collapse title="Équipements">
-        <ul>
-          {logement.equipments.map((equipment, index) => {
-            return <li key={index}>{equipment}</li>;
-          })}
-        </ul>
-      </Collapse>
-      <Collapse title="Description">
-        <p>{logement.description}</p>
-      </Collapse>
+      <div>
+        <Collapse title="Équipements">
+          <ul>
+            {logement.equipments.map((equipment, index) => {
+              return <li key={index}>{equipment}</li>;
+            })}
+          </ul>
+        </Collapse>
+        <Collapse title="Description">
+          <p>{logement.description}</p>
+        </Collapse>
+      </div>
     </div>
   );
 };
