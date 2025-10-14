@@ -44,9 +44,9 @@ const Details = () => {
     <div className="details">
       <Slider pictures={logement.pictures} />
       <Apart />
-      <Host />
-      <Rating />
       <Tag />
+      <Host />
+      <Rating rating={logement.rating} />
       <div>
         <Collapse title="Équipements">
           <ul>

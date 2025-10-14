@@ -1,18 +1,24 @@
-const Rating = () => {
+import FullStar from "../../assets/full_star.png";
+import EmptyStar from "../../assets/empty_star.png";
+
+import "./rating.scss";
+
+const Rating = ({ rating }) => {
+  const score = Number(rating); // S'assure que c'est un nombre
+
   return (
     <div className="rating">
-      <h1>Rating Page</h1>
+      {[...Array(5)].map((_, i) => (
+        <p key={i}>
+          {i < score ? (
+            <img src={FullStar} alt="Étoile pleine" className="full-star" />
+          ) : (
+            <img src={EmptyStar} alt="Étoile vide" className="empty-star" />
+          )}
+        </p>
+      ))}
     </div>
   );
 };
 
 export default Rating;
-
-{
-  [...Array(5)].map((_, i) => (
-    <p key={i}>
-      {/* Ici on compare le score et i et on affiche les étoiles en fonction
-          {i < rating ? "★" : "☆"} => Dans l'idée l'étoile remplie / vide est à aller chercher sur Figma */}
-    </p>
-  ));
-}
