@@ -1,7 +1,10 @@
-const Apart = () => {
+import "./apart.scss";
+
+const Apart = ({ title, location }) => {
   return (
-    <div className="apart">
-      <h1>Apart Page</h1>
+    <div className="apart-info">
+      <h1>{title}</h1>
+      <p>{location}</p>
     </div>
   );
 };

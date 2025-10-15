@@ -43,9 +43,9 @@ const Details = () => {
   return (
     <div className="details">
       <Slider pictures={logement.pictures} />
-      <Apart />
-      <Tag />
-      <Host />
+      <Apart title={logement.title} location={logement.location} />
+      <Tag tags={logement.tags} />
+      <Host host={logement.host} />
       <Rating rating={logement.rating} />
       <div>
         <Collapse title="Équipements">

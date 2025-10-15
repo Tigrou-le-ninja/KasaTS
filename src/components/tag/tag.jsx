@@ -1,7 +1,13 @@
-const Tag = () => {
+import "./tag.scss";
+
+const Tag = ({ tags }) => {
   return (
-    <div className="tag">
-      <h1>Tag Page</h1>
+    <div className="tags">
+      {tags.map((tag, index) => (
+        <span key={index} className="tag">
+          {tag}
+        </span>
+      ))}
     </div>
   );
 };
