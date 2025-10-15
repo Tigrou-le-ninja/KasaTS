@@ -1,4 +1,5 @@
 import { useState, useId, useRef, useEffect } from "react";
+
 import Chevron from "../../assets/chevron.png";
 
 import "./collapse.scss";

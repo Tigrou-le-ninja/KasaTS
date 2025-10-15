@@ -1,5 +1,6 @@
 import homeImage from "../../assets/banner_home.png";
 import aboutImage from "../../assets/banner_about.png";
+
 import "./banner.scss";
 
 const images = {

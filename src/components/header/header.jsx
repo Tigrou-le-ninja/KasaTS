@@ -1,4 +1,5 @@
 import { NavLink, Link } from "react-router-dom";
+
 import Logo from "../../assets/logo.png";
 
 import "./header.scss";
@@ -11,10 +12,10 @@ function Header() {
       </Link>
 
       <nav className="navbar">
-        <NavLink className={({ isActive }) => (isActive ? "navbar__link--active" : "navbar__link")} to="/">
+        <NavLink className={({ isActive }) => (isActive ? "navbar-link--active" : "navbar-link")} to="/">
           Accueil
         </NavLink>
-        <NavLink className={({ isActive }) => (isActive ? "navbar__link--active" : "navbar__link")} to="/about">
+        <NavLink className={({ isActive }) => (isActive ? "navbar-link--active" : "navbar-link")} to="/about">
           A Propos
         </NavLink>
       </nav>

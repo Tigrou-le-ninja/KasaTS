@@ -1,7 +1,8 @@
 import Banner from "../../components/banner/banner";
 import { useEffect, useState } from "react";
-import "./home.scss";
 import Card from "../../components/card/card";
+
+import "./home.scss";
 
 const Home = () => {
   const [locations, setLocations] = useState([]);
