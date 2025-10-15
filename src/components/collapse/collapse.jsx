@@ -17,14 +17,8 @@ const Collapse = ({ title, children }) => {
     const contentEl = contentRef.current;
 
     if (isOpen && contentEl) {
-      const contentHeight = contentEl.scrollHeight;
-      setHeight(`${contentHeight}px`);
-
-      const timer = setTimeout(() => {
-        setHeight("auto"); // Pour les contenus qui peuvent changer ensuite
-      }, 600); // durée = celle du CSS
-
-      return () => clearTimeout(timer);
+      const contentHeight = contentEl.scrollHeight; // Mesure la hauteur du contenu
+      setHeight(`${contentHeight}px`); // Change la valeur de height pour la valeur mesurée par scrollHeight
     } else if (contentEl) {
       setHeight(`${contentEl.scrollHeight}px`); // Fixe la hauteur actuelle
       setTimeout(() => {

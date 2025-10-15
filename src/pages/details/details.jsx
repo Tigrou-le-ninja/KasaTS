@@ -43,11 +43,15 @@ const Details = () => {
   return (
     <div className="details">
       <Slider pictures={logement.pictures} />
-      <Apart title={logement.title} location={logement.location} />
-      <Tag tags={logement.tags} />
-      <Host host={logement.host} />
-      <Rating rating={logement.rating} />
-      <div>
+      <div className="apart-tags">
+        <Apart title={logement.title} location={logement.location} />
+        <Tag tags={logement.tags} />
+      </div>
+      <div className="host-rating">
+        <Host host={logement.host} />
+        <Rating rating={logement.rating} />
+      </div>
+      <div className="collapses">
         <Collapse title="Équipements">
           <ul>
             {logement.equipments.map((equipment, index) => {
