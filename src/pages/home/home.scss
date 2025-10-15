@@ -1,0 +1,9 @@
+@use "../../styles/variables.scss" as *;
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-bottom: 50px;
+}
