@@ -38,7 +38,7 @@
       margin-right: 0.5rem;
     }
 
-    @media (max-width: $breakpoint-tablet) {
+    @media (max-width: $breakpoint-mobile) {
       left: 1rem;
       transform: translateY(-50%);
       justify-content: flex-start;

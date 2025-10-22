@@ -26,7 +26,7 @@
       color: $color-secondary;
       transition: all 0.3s ease;
 
-      @media (max-width: $breakpoint-tablet) {
+      @media (max-width: $breakpoint-mobile) {
         text-transform: uppercase;
       }
     }
