@@ -2,8 +2,7 @@
 
 .collapse {
   font-family: $font-family-base;
-  width: 100%;
-  margin-bottom: 20px;
+  margin: 10px 20px;
   border-radius: 5px;
   overflow: hidden;
   font-family: $font-family-base;
@@ -31,12 +30,23 @@
 
 .collapse-title {
   text-align: left;
+  font-size: 24px;
+  font-weight: 700;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 13px;
+  }
 }
 
 .chevron-icon {
-  width: 16px;
-  height: 16px;
+  width: 32px;
+  height: 32px;
   transition: transform 0.3s ease;
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 24px;
+    height: 24px;
+  }
 
   &.open {
     transform: rotate(-180deg);
@@ -53,8 +63,8 @@
 }
 
 .collapse-content-inner {
+  text-align: left;
   padding: 20px;
-  font-size: 14px;
   line-height: 1.5;
 }
 

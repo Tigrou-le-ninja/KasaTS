@@ -52,15 +52,15 @@ const Details = () => {
         <Rating rating={logement.rating} />
       </div>
       <div className="collapses">
+        <Collapse title="Description">
+          <p>{logement.description}</p>
+        </Collapse>
         <Collapse title="Équipements">
           <ul>
             {logement.equipments.map((equipment, index) => {
               return <li key={index}>{equipment}</li>;
             })}
           </ul>
-        </Collapse>
-        <Collapse title="Description">
-          <p>{logement.description}</p>
         </Collapse>
       </div>
     </div>
