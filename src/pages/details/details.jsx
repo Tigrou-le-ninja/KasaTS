@@ -43,13 +43,15 @@ const Details = () => {
   return (
     <div className="details">
       <Slider pictures={logement.pictures} />
-      <div className="apart-tags">
-        <Apart title={logement.title} location={logement.location} />
-        <Tag tags={logement.tags} />
-      </div>
-      <div className="host-rating">
-        <Host host={logement.host} />
-        <Rating rating={logement.rating} />
+      <div className="ATHR">
+        <div className="apart-tags">
+          <Apart title={logement.title} location={logement.location} />
+          <Tag tags={logement.tags} />
+        </div>
+        <div className="host-rating">
+          <Host host={logement.host} />
+          <Rating rating={logement.rating} />
+        </div>
       </div>
       <div className="collapses">
         <Collapse title="Description">
