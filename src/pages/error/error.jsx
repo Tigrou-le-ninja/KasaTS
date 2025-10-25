@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 import "./error.scss";
 
 const Error = () => {
+  document.title = "Erreur 404 - Kasa";
+
   return (
     <div className="error">
       <p className="error-404">404</p>

@@ -9,6 +9,11 @@
     font-size: 36px;
     line-height: 143%;
     color: $color-primary;
+    margin: 20px 0 0 0;
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 18px;
+    }
   }
 
   & p {
@@ -17,5 +22,11 @@
     font-size: 18px;
     line-height: 143%;
     color: $color-secondary;
+    margin: 0 0 10px 0;
+
+    @media (max-width: $breakpoint-mobile) {
+      font-size: 14px;
+      margin: 0;
+    }
   }
 }

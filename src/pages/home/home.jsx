@@ -5,6 +5,8 @@ import Card from "../../components/card/card";
 import "./home.scss";
 
 const Home = () => {
+  document.title = "Accueil - Kasa";
+
   const [locations, setLocations] = useState([]);
   const getLogements = async () => {
     const response = await fetch("/data/logements.json");

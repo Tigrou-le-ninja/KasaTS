@@ -66,6 +66,12 @@
   text-align: left;
   padding: 20px;
   line-height: 1.5;
+  font-size: 18px;
+
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 14px;
+    padding: 10px;
+  }
 }
 
 ul {
@@ -74,14 +80,11 @@ ul {
   padding: 0;
 }
 
-@media (min-width: $breakpoint-desktop) {
-  .collapse-header {
-    font-size: 18px;
-    padding: 15px 25px;
-  }
+.collapse-description {
+  width: 40%;
 
-  .collapse-content-inner {
-    font-size: 16px;
-    padding: 25px;
+  @media (max-width: $breakpoint-mobile) {
+    width: 100%;
+    margin-bottom: 10px;
   }
 }

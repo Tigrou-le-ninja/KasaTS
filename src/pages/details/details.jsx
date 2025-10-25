@@ -11,6 +11,8 @@ import Collapse from "../../components/collapse/collapse";
 import "./details.scss";
 
 const Details = () => {
+  document.title = "Détails - Kasa";
+
   // Initialiser à `null` est plus sémantique pour un objet qu'on attend.
   const [logement, setLogement] = useState(null);
   const { id } = useParams();

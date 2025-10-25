@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import "./about.scss";
 
 const About = () => {
+  document.title = "À propos - Kasa";
+
   const [collapses, setCollapses] = useState([]);
   const getCollapses = async () => {
     const response = await fetch("/data/about.json");
